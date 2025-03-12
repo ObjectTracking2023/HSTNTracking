@@ -1,0 +1,16 @@
+@@TRAX:hello "trax.name=" "trax.family=" "trax.image=path;" "trax.region=mask;" "trax.description=" "trax.version=3" "vot=python" "trax.channels=color;" 
+@@TRAX:initialize "file:///home/VOT2021/agility/00000001.jpg" "mask:549,249,24,58,1,3,20,5,1,5,13,12,12,14,10,15,10,15,10,15,9,16,8,16,9,15,9,15,9,15,9,15,9,15,9,15,9,15,9,15,9,15,9,15,9,16,9,15,10,14,10,14,10,15,9,15,9,15,8,19,5,20,122,22,2,22,2,22,2,22,2,22,2,22,2,22,2,22,2,22,2,22,2,9,2,11,2,9,3,10,2,9,3,10,2,9,4,9,2,9,4,9,2,9,5,8,2,9,5,8,3,8,5,8,3,8,5,8,3,7,6,8,3,7,6,7,4,6,8,5,5,6,18,5,20,3" 
+@@TRAX:state "mask:549,249,24,58,1,3,20,5,1,5,13,12,12,14,10,15,10,15,10,15,9,16,8,16,9,15,9,15,9,15,9,15,9,15,9,15,9,15,9,15,9,15,9,15,9,16,9,15,10,14,10,14,10,15,9,15,9,15,8,19,5,20,122,22,2,22,2,22,2,22,2,22,2,22,2,22,2,22,2,22,2,22,2,9,2,11,2,9,3,10,2,9,3,10,2,9,4,9,2,9,4,9,2,9,5,8,2,9,5,8,3,8,5,8,3,8,5,8,3,7,6,8,3,7,6,7,4,6,8,5,5,6,18,5,20,3" 
+@@TRAX:frame "file:///home/VOT2021/agility/00000002.jpg" 
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/ori/pytracking-master/pytracking/run_vot.py", line 14, in run_vot2020
+    tracker.run_vot2020(debug, visdom_info)
+  File "/home/ori/pytracking-master/pytracking/evaluation/tracker.py", line 554, in run_vot2020
+    alpha_model.initialize(imagevot, np.array(gt_bbox_np))
+  File "/home/ori/pytracking-master/ltr/external/AR/pytracking/ARcm_seg.py", line 42, in initialize
+    self.refine_network.forward_ref(patch1_tensor, bbox1_crop_tensor)
+  File "/home/ori/pytracking-master/ltr/models/AR_seg_mask/AR_seg_mask.py", line 57, in forward_ref
+    train_feat_dict = self.extract_backbone_features(train_imgs.view(-1, *train_imgs.shape[-3:])) # 
+@@TRAX:quit 
+Process exited with code (1)

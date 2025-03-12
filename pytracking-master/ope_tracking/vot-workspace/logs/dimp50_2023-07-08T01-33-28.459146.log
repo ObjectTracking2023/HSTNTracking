@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/home/zhanghc@1/anaconda3/envs/pytracking/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/zhanghc@1/anaconda3/envs/pytracking/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/zhanghc@1/888_second_work/0.second/pytracking-master/pytracking/VOT/dimp50.py", line 4, in <module>
+    oracle_libs = os.environ['ORACLE_HOME']+"/lib/"
+  File "/home/zhanghc@1/anaconda3/envs/pytracking/lib/python3.7/os.py", line 681, in __getitem__
+    raise KeyError(key) from None
+KeyError: 'ORACLE_HOME'
+Process not alive anymore, unable to retrieve return code

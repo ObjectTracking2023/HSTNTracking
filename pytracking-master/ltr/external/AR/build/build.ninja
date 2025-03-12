@@ -1,0 +1,28 @@
+ninja_required_version = 1.3
+cxx = c++
+nvcc = /usr/local/cuda/bin/nvcc
+
+cflags = -DTORCH_EXTENSION_NAME=_prroi_pooling -DTORCH_API_INCLUDE_EXTENSION_H -isystem /root/miniconda3/lib/python3.8/site-packages/torch/include -isystem /root/miniconda3/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -isystem /root/miniconda3/lib/python3.8/site-packages/torch/include/TH -isystem /root/miniconda3/lib/python3.8/site-packages/torch/include/THC -isystem /usr/local/cuda/include -isystem /root/miniconda3/include/python3.8 -D_GLIBCXX_USE_CXX11_ABI=0 -fPIC -std=c++14
+post_cflags = 
+cuda_cflags = -DTORCH_EXTENSION_NAME=_prroi_pooling -DTORCH_API_INCLUDE_EXTENSION_H -isystem /root/miniconda3/lib/python3.8/site-packages/torch/include -isystem /root/miniconda3/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -isystem /root/miniconda3/lib/python3.8/site-packages/torch/include/TH -isystem /root/miniconda3/lib/python3.8/site-packages/torch/include/THC -isystem /usr/local/cuda/include -isystem /root/miniconda3/include/python3.8 -D_GLIBCXX_USE_CXX11_ABI=0 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_75,code=sm_75 --compiler-options '-fPIC' -std=c++14
+cuda_post_cflags = 
+ldflags = -shared -L/root/miniconda3/lib/python3.8/site-packages/torch/lib -lc10 -lc10_cuda -ltorch_cpu -ltorch_cuda -ltorch -ltorch_python -L/usr/local/cuda/lib64 -lcudart
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+rule cuda_compile
+  command = $nvcc $cuda_cflags -c $in -o $out $cuda_post_cflags
+
+rule link
+  command = $cxx $in $ldflags -o $out
+
+build prroi_pooling_gpu.o: compile /home/ori/pytracking-master/ltr/external/AR/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/src/prroi_pooling_gpu.c
+build prroi_pooling_gpu_impl.cuda.o: cuda_compile /home/ori/pytracking-master/ltr/external/AR/ltr/external/PreciseRoIPooling/pytorch/prroi_pool/src/prroi_pooling_gpu_impl.cu
+
+build _prroi_pooling.so: link prroi_pooling_gpu.o prroi_pooling_gpu_impl.cuda.o
+
+default _prroi_pooling.so
+

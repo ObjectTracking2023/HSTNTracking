@@ -1,0 +1,15 @@
+@@TRAX:hello "trax.name=" "trax.family=" "trax.image=path;" "trax.region=polygon;" "trax.description=" "trax.version=3" "trax.channels=color;" 
+@@TRAX:initialize "file:///home/VOT2021/book/00000001.jpg" "204.0000,48.0000,286.0000,48.0000,286.0000,112.0000,204.0000,112.0000" 
+@@TRAX:state "204.0000,48.0000,286.0000,48.0000,286.0000,112.0000,204.0000,112.0000" 
+@@TRAX:frame "file:///home/VOT2021/book/00000002.jpg" 
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/ori/pytracking-master/pytracking/run_vot.py", line 19, in run_vot
+    tracker.run_vot()
+  File "/home/ori/pytracking-master/pytracking/evaluation/tracker.py", line 688, in run_vot
+    image = self._read_image(image_path)
+  File "/home/ori/pytracking-master/pytracking/evaluation/tracker.py", line 766, in _read_image
+    im = cv.imread(image_file)
+TypeError: Can't convert object to 'str' for 'filename'
+@@TRAX:quit 
+Process exited with code (1)

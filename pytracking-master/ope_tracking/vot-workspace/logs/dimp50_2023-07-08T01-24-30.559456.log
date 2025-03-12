@@ -1,0 +1,20 @@
+:/home/zhanghc@1/anaconda3/pkgs/libstdcxx-ng-11.2.0-h1234567_1/lib
+Traceback (most recent call last):
+  File "/home/zhanghc@1/anaconda3/envs/pytracking/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/zhanghc@1/anaconda3/envs/pytracking/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/zhanghc@1/888_second_work/0.second/pytracking-master/pytracking/VOT/dimp50.py", line 12, in <module>
+    import pytracking.run_vot as run_vot
+  File "/home/zhanghc@1/888_second_work/0.second/pytracking-master/pytracking/__init__.py", line 6, in <module>
+    import pytracking.libs.optimization as optimization
+  File "/home/zhanghc@1/888_second_work/0.second/pytracking-master/pytracking/libs/optimization.py", line 5, in <module>
+    from pytracking.utils.plotting import plot_graph
+  File "/home/zhanghc@1/888_second_work/0.second/pytracking-master/pytracking/utils/plotting.py", line 1, in <module>
+    import matplotlib.pyplot as plt
+  File "/home/zhanghc@1/anaconda3/envs/pytracking/lib/python3.7/site-packages/matplotlib/__init__.py", line 176, in <module>
+    _check_versions()
+  File "/home/zhanghc@1/anaconda3/envs/pytracking/lib/python3.7/site-packages/matplotlib/__init__.py", line 161, in _check_versions
+    from . import ft2font
+ImportError: /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /home/zhanghc@1/anaconda3/envs/pytracking/lib/python3.7/site-packages/matplotlib/ft2font.cpython-37m-x86_64-linux-gnu.so)
+Process not alive anymore, unable to retrieve return code

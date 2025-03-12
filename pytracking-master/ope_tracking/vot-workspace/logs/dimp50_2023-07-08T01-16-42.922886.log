@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/home/zhanghc@1/888_second_work/0.second/pytracking-master/pytracking/VOT/dimp50.py", line 8, in <module>
+    os.execv(sys.argv[0], sys.argv)
+PermissionError: [Errno 13] Permission denied
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/zhanghc@1/anaconda3/envs/pytracking/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/zhanghc@1/anaconda3/envs/pytracking/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/zhanghc@1/888_second_work/0.second/pytracking-master/pytracking/VOT/dimp50.py", line 10, in <module>
+    sys.exit('EXCEPTION: Failed to Execute under modified environment, '+e)
+TypeError: can only concatenate str (not "PermissionError") to str
+Process not alive anymore, unable to retrieve return code

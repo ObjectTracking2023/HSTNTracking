@@ -1,0 +1,4 @@
+# ninja log v5
+0	727	1689606974704246098	prroi_pooling_gpu_impl.cuda.o	9491b857e7cbd4d1
+0	13129	1689606987100169198	prroi_pooling_gpu.o	bc63a1c5d4540fda
+13129	13546	1689606987516166618	_prroi_pooling.so	265eaf72fcbd706

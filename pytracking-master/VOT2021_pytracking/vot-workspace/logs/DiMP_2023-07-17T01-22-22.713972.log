@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/home/ori/pytracking-master/pytracking/__init__.py", line 7, in <module>
+    from pytracking.run_tracker import run_tracker
+  File "/home/ori/pytracking-master/pytracking/run_tracker.py", line 9, in <module>
+    from pytracking.evaluation import get_dataset
+  File "/home/ori/pytracking-master/pytracking/evaluation/__init__.py", line 2, in <module>
+    from .tracker import Tracker, trackerlist
+  File "/home/ori/pytracking-master/pytracking/evaluation/tracker.py", line 15, in <module>
+    from pytracking.vot_utils.region import vot_overlap
+ModuleNotFoundError: No module named 'pytracking.vot_utils'
+Process not alive anymore, unable to retrieve return code
