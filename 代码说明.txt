@@ -1,7 +1,0 @@
-1.代码的框架基于pytrakcing，主要改动在\Code&Paper\1.论文代码\pytracking-master\ltr\models\stdomain；
-2.因此，大部分的训练或测试步骤与pytracking相同，环境配置好后根据pytracking的readme即可运行；（可能用到了其他库，使用pip install再补上就可以）
-3.\Code&Paper\1.论文代码\pytracking-master\ltr是用来训练的，ope_tracking文件夹测试otb,nfs,uav等类型测试数据集，vot_tracking测试vot2018，2019数据集，VOT2021_pytracking文件夹测试VOT2021及以后数据集；相关代码运行或数据集路径设置、参数路径设置、训练后的模型参数设置等可查看pytracking使用方法或其他csdn博客；
-4.模型参数保存在\Code&Paper\1.论文代码\pytracking-master\ope_tracking\networks\dimp50.pth；
-5.ARNet可帮助输出VOT2021的mask掩码，保存在\Code&Paper\1.论文代码\pytracking-master\ltr\external\AR\ltr\checkpoint\ARcm_coco_seg\ARnet_seg_mask_ep0040.pth；
-6.如何运行pytracking跑VOT2021数据集可参考博客：https://blog.csdn.net/laizi_laizi/article/details/110444884?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522171377350016800185825200%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=171377350016800185825200&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-3-110444884-null-null.142^v100^pc_search_result_base7&utm_term=pytracking%E8%BF%90%E8%A1%8C%20VOT2021&spm=1018.2226.3001.4187等；
-7.\Code&Paper\5.trackingresults中保存了测试结果与相应的参数文件；
